@@ -75,7 +75,7 @@ async fn main() -> Result<(), DbErr> {
     feature = "sqlx-postgres"
 ))]
 #[cfg_attr(
-    any(feature = "sqlx-mysql", feature = "sqlx-sqlite"),
+    any(feature = "sqlx-mysql"),
     should_panic(expected = "Database backend doesn't support RETURNING")
 )]
 async fn update_many() {
